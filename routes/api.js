@@ -7,10 +7,8 @@ router.get('/api-gt', function(req,res){
 });
 // adds new users to db
 router.post('/api-pst', function(req,res){
-    console.log(req.body);
     res.send({
         type:'POST',
-        id: req.body.id,
         name: req.body.name
         });
 });
