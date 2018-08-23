@@ -3,10 +3,12 @@ const Schema = mongoose.Schema;
 
 
 const userSchema = new Schema({
-    id: Number,
-    firstName: String,
-    lastName: String,
-    emailAddress: String
+    id: { type: Number, required: true },
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    emailAddress: { type: String, required: true }
 });
 
-mongoose.model('users',userSchema);
+const makeUser = mongoose.model('Users',userSchema);
+
+module.exports = makeUser;
